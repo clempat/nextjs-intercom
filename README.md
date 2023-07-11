@@ -1,3 +1,80 @@
+This is an exemple how to reproduce a certain bug when it comes to Intercom with Nextjs
+
+## Steps to reproduce
+
+- Open the website on mobile or with chrome mobile simulation
+- Open the Intercom
+- Clost the intercom
+- Click on test to navigate to the test page
+
+## What should I see
+
+The test page
+
+## What do I see
+
+![Screenshot](./docs/assets/error.png?raw=true "Screenshot")
+
+```
+redirect-boundary.js:61 Uncaught TypeError: Cannot read properties of null (reading 'removeChild')
+at unmountHoistable (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:35632:23)
+at commitDeletionEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20927:13)
+at commitDeletionEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:20891:5)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21291:9)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21366:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21366:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21366:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21366:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21327:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21758:9)
+at recursivelyTraverseMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21305:7)
+at commitMutationEffectsOnFiber (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21563:11)
+at commitMutationEffects (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:21275:3)
+at commitRootImpl (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24994:5)
+at commitRoot (webpack-internal:///(:3001/app-client)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:24860:5)
+```
+
+## More notes
+
+It looks like it is working as expecting if we first navigate and then open/close the Intercom
+
+# Next js Original documentation
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
