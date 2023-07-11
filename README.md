@@ -1,5 +1,7 @@
 This is an exemple how to reproduce a certain bug when it comes to Intercom with Nextjs
 
+First set the environment variable NEXT_PUBLIC_INTERCOM_APP_ID
+
 ## Steps to reproduce
 
 - Open the website on mobile or with chrome mobile simulation
